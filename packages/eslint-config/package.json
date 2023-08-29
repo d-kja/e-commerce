@@ -1,0 +1,11 @@
+{
+  "name": "@sw-ec/eslint-config",
+  "description": "eslint config",
+  "version": "1.0.0",
+  "author": "d-kja",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@rocketseat/eslint-config": "^2.1.0"
+  }
+}

@@ -11,10 +11,11 @@
 # next.js
 **/.next/
 **/out/
+**/.turbo/
 
 # production
 **/dist/
-**/build
+**/build/
 
 # misc
 **/.DS_Store
@@ -25,13 +26,13 @@
 **/yarn-debug.log*
 **/yarn-error.log*
 
-**/# local env files
+# local env files
 **/.env
 **/.env*.local
 
-**/# vercel
+# vercel
 **/.vercel
 
-**/# typescript
+# typescript
 **/*.tsbuildinfo
 **/next-env.d.ts

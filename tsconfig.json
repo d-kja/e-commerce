@@ -1,3 +1,3 @@
 {
-  "extends": "@d-kja/tsconfig/base.json"
+  "extends": "@sw-ec/ts-config/base.json"
 }

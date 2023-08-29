@@ -2,7 +2,7 @@
 
 A dynamic e-commerce layout
 
-## Using this example
+## Using this project
 
 Run the following command:
 
