@@ -45,6 +45,9 @@ importers:
       '@storybook/blocks':
         specifier: ^7.4.0
         version: 7.4.0(@types/react-dom@18.2.7)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/manager-api':
+        specifier: ^7.4.0
+        version: 7.4.0(react-dom@18.2.0)(react@18.2.0)
       '@storybook/react':
         specifier: ^7.4.0
         version: 7.4.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)
@@ -54,6 +57,9 @@ importers:
       '@storybook/testing-library':
         specifier: ^0.2.0
         version: 0.2.0
+      '@storybook/theming':
+        specifier: ^7.4.0
+        version: 7.4.0(react-dom@18.2.0)(react@18.2.0)
       '@types/react':
         specifier: ^18.2.15
         version: 18.2.15
@@ -69,6 +75,12 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.3.2
         version: 3.3.2(vite@4.4.5)
+      autoprefixer:
+        specifier: ^10.4.15
+        version: 10.4.15(postcss@8.4.29)
+      daisyui:
+        specifier: ^3.6.3
+        version: 3.6.3
       eslint:
         specifier: ^8.45.0
         version: 8.48.0
@@ -81,9 +93,15 @@ importers:
       eslint-plugin-storybook:
         specifier: ^0.6.13
         version: 0.6.13(eslint@8.48.0)(typescript@5.0.2)
+      postcss:
+        specifier: ^8.4.29
+        version: 8.4.29
       storybook:
         specifier: ^7.4.0
         version: 7.4.0
+      tailwindcss:
+        specifier: ^3.3.3
+        version: 3.3.3
       typescript:
         specifier: ^5.0.2
         version: 5.0.2
