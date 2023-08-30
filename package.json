@@ -9,13 +9,15 @@
     "version-packages": "changeset version",
     "publish-packages": "turbo run build --filter=!./apps/* && changeset publish",
     "prepare": "husky install",
+    "git-cz": "cz",
     "commit": "pnpm lint"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
     "eslint": "^8.48.0",
+    "husky": "^8.0.0",
     "prettier": "^3.0.2",
-    "turbo": "latest",
-    "husky": "^8.0.0"
+    "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",
   "workspaces": [
