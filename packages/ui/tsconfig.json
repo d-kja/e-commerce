@@ -1,5 +1,5 @@
 {
-  "extends": ["@sw-ec/ts-config/react.json"],
+  "extends": "@sw-ec/ts-config/react.json",
   "include": ["src"],
   "exclude": ["node_modules"]
 }
