@@ -1,0 +1,28 @@
+name: Deploy Storybook
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+
+      - name: install dependencies
+        run: pnpm ci
+
+      - name: build project
+        run: pnpm build
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: nyyu
+
+      - name: deploy storybook
+        # https://medium.com/swlh/how-to-deploy-storybook-to-github-pages-4894097d49ab
