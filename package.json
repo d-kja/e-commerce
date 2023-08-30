@@ -7,12 +7,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "publish-packages": "turbo run build --filter=!./apps/* && changeset publish"
+    "publish-packages": "turbo run build --filter=!./apps/* && changeset publish",
+    "prepare": "husky install",
+    "commit": "pnpm lint"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.2",
-    "turbo": "latest"
+    "turbo": "latest",
+    "husky": "^8.0.0"
   },
   "packageManager": "pnpm@8.6.10",
   "workspaces": [

@@ -11,6 +11,9 @@ importers:
       eslint:
         specifier: ^8.48.0
         version: 8.48.0
+      husky:
+        specifier: ^8.0.0
+        version: 8.0.0
       prettier:
         specifier: ^3.0.2
         version: 3.0.2
@@ -21,7 +24,7 @@ importers:
   apps/docs:
     dependencies:
       '@sw-ec/ui':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/ui
       react:
         specifier: ^18.2.0
@@ -127,6 +130,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^13.4.19
         version: 13.4.19
+      '@sw-ec/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
       '@sw-ec/ts-config':
         specifier: workspace:*
         version: link:../../packages/ts-config
@@ -6980,6 +6986,12 @@ packages:
     resolution: {integrity: sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==}
     engines: {node: '>=14.18.0'}
     dev: false
+
+  /husky@8.0.0:
+    resolution: {integrity: sha512-4qbE/5dzNDNxFEkX9MNRPKl5+omTXQzdILCUWiqG/lWIAioiM5vln265/l6I2Zx8gpW8l1ukZwGQeCFbBZ6+6w==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}

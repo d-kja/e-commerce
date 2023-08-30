@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["custom/next"],
-};
+  extends: ['@sw-ec/eslint-config', 'plugin:@next/next/recommended'],
+}
