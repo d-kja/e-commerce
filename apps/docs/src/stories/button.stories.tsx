@@ -62,3 +62,16 @@ export const OnlyIcon: StoryObj<ButtonProps> = {
     children: <Loader2 strokeWidth={1.5} className="w-5 h-5 animate-spin" />,
   },
 }
+
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'primary',
+    opt: 'outline',
+    disabled: true,
+    children: (
+      <>
+        {'Remove'} <TrashIcon strokeWidth={1.5} className="w-5 h-5" />
+      </>
+    ),
+  },
+}

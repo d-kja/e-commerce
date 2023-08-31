@@ -7,6 +7,7 @@ const ElementVariants = tv({
     'btn px-4 py-3 rounded-md',
     'font-normal text-base',
     'flex gap-2 justify-center items-center',
+    'disabled:ring-1 ring-current disabled:bg-transparent',
   ],
   variants: {
     variant: {
