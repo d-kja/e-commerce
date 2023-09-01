@@ -23,6 +23,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.15",
     "daisyui": "^3.6.3",
+    "lucide-react": "^0.272.0",
     "postcss": "^8.4.29",
     "tailwind-variants": "^0.1.13",
     "tailwindcss": "^3.3.3"

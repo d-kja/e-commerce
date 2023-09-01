@@ -23,10 +23,11 @@ export interface WrapperProps
 export const Wrapper: FC<WrapperProps> = ({
   className,
   children,
+  theme = 'light',
   ...props
 }) => {
   return (
-    <div className={ElementVariants({ className })} {...props}>
+    <div className={ElementVariants({ className, theme })} {...props}>
       {children}
     </div>
   )

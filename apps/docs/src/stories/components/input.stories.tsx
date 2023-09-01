@@ -10,9 +10,9 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Wrapper>
+        <>
           <Story />
-        </Wrapper>
+        </>
       )
     },
   ],
@@ -29,21 +29,17 @@ export const Secondary: StoryObj<InputProps> = {
     variant: 'secondary',
   },
 }
-export const Outline: StoryObj<InputProps> = {
-  args: {
-    variant: 'primary',
-  },
-}
 export const Ghost: StoryObj<InputProps> = {
   args: {
     variant: 'ghost',
     className: 'text-zinc-900',
   },
 }
-export const WithIcon: StoryObj<InputProps> = {
+export const WithError: StoryObj<InputProps> = {
   args: {
     variant: 'primary',
-    placeholder: 'Example@mail.com',
+    className: 'text-zinc-900',
+    error: true,
   },
 }
 
@@ -53,4 +49,13 @@ export const Disabled: StoryObj<InputProps> = {
     disabled: true,
     placeholder: 'Example@mail.com',
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Wrapper>
+          <Story />
+        </Wrapper>
+      )
+    },
+  ],
 }
