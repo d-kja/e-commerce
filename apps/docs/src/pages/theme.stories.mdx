@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/blocks'
+import { ThemeSelector } from '../components/theme-selector.tsx'
+import { Button } from '@sw-ec/ui'
+
+<Meta title="Select theme" />
+
+# Theming
+
+Escolha o tema da aplicação
+
+<div className="bg-base-100 px-4 py-3 rounded-lg border border-zinc-700">
+  <strong className="block mb-3 text-lg">Preview</strong>
+
+<div class="flex flex-wrap gap-1">
+  <div
+    class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"
+    title="primary"
+  >
+    <div class="text-primary-content text-sm font-bold">P</div>
+  </div>
+  <div
+    class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"
+    title="secondary"
+  >
+    <div class="text-secondary-content text-sm font-bold">S</div>
+  </div>
+  <div
+    class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"
+    title="accent"
+  >
+    <div class="text-accent-content text-sm font-bold">A</div>
+  </div>
+  <div
+    class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"
+    title="neutral"
+  >
+    <div class="text-neutral-content text-sm font-bold">N</div>
+  </div>
+</div>
+
+<hr className="my-4" />
+
+<div class="flex flex-col gap-3">
+  <strong className="block mb-3 text-lg">Button component</strong>
+
+  <div className="grid grid-cols-2 gap-4">
+    <Button variant="primary">
+      <span>Primary Button</span>
+    </Button>
+    <Button variant="secondary">
+      <span>Secondary Button</span>
+    </Button>
+    <Button variant="primary" opt="outline">
+      <span>Outline Button</span>
+    </Button>
+    <Button>Neutral Button</Button>
+  </div>
+</div>
+
+</div>
+
+<hr className="my-4" />
+
+<ThemeSelector />

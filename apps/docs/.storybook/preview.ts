@@ -3,11 +3,8 @@ import type { Preview } from '@storybook/react'
 import { withThemeByClassName } from '@storybook/addon-styling'
 import { themes } from '@storybook/theming'
 
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-
-import '../src/index.css'
-
 import '@sw-ec/ui/dist/index.css'
+import '../src/index.css'
 
 const preview: Preview = {
   parameters: {
