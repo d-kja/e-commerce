@@ -19,10 +19,7 @@ const preview: Preview = {
       theme: themes.dark,
     },
   },
-
   decorators: [
-    // Adds theme switching support.
-    // NOTE: requires setting "darkMode" to "class" in your tailwind config
     withThemeByClassName({
       themes: {
         light: 'light',
