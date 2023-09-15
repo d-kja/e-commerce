@@ -10,7 +10,8 @@
     "publish-packages": "turbo run build --filter=!./apps/* && changeset publish",
     "prepare": "husky install",
     "commit": "cz",
-    "commit-lint": "node --no-warnings --loader tsx ./node_modules/@commitlint/cli/cli.js"
+    "commit-lint": "node --no-warnings --loader tsx ./node_modules/@commitlint/cli/cli.js",
+    "gh-build": "turbo run build --filter=!./apps/web"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -34,5 +35,6 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "name": "@d-kja/e-commerce"
+  "name": "@d-kja/e-commerce",
+  "homepage": "http://d-kja.github.io/e-commerce"
 }

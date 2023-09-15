@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite'
+import { mergeConfig } from 'vite'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.tsx'],
@@ -18,6 +19,23 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  viteFinal: (config, options) => {
+    if (options.configType === 'PRODUCTION') {
+      config.base = '/e-commerce/'
+    }
+
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: [
+          '@storybook/addon-styling',
+          '@storybook/theming',
+          '@storybook/blocks',
+        ],
+      },
+    })
+
+    return config
   },
 }
 export default config

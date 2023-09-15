@@ -16,10 +16,12 @@
 # production
 **/dist/
 **/build/
+**/storybook-static/
 
 # misc
 **/.DS_Store
 **/*.pem
+bin
 
 # debug
 **/npm-debug.log*
