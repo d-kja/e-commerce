@@ -3,15 +3,6 @@ import { tv, type VariantProps } from 'tailwind-variants'
 
 const ElementVariants = tv({
   base: ['checkbox rounded-[0.25rem] w-6 h-6 border-2'],
-  variants: {
-    variant: {
-      primary: 'checkbox-primary',
-      secondary: 'checkbox-secondary',
-    },
-    error: {
-      true: 'checkbox-error',
-    },
-  },
 })
 
 type ElementVariantsProps = VariantProps<typeof ElementVariants>
@@ -21,8 +12,7 @@ export interface CheckboxProps
 
 export const Checkbox: FC<CheckboxProps> = ({
   className,
-  variant,
-  error = false,
+
   ...props
 }) => {
   return (
@@ -30,8 +20,6 @@ export const Checkbox: FC<CheckboxProps> = ({
       type="checkbox"
       className={ElementVariants({
         className,
-        variant,
-        error,
       })}
       {...props}
     />

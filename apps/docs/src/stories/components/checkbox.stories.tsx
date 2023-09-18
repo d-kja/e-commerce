@@ -22,16 +22,16 @@ export default {
 export const Default: StoryObj<CheckboxProps> = {}
 export const Primary: StoryObj<CheckboxProps> = {
   args: {
-    variant: 'primary',
+    className: 'checkbox-primary',
   },
 }
 export const Secondary: StoryObj<CheckboxProps> = {
   args: {
-    variant: 'secondary',
+    className: 'checkbox-secondary',
   },
 }
 export const Error: StoryObj<CheckboxProps> = {
   args: {
-    error: true,
+    className: 'checkbox-error',
   },
 }

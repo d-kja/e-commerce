@@ -3,7 +3,6 @@ import type { Preview } from '@storybook/react'
 import { withThemeByClassName } from '@storybook/addon-styling'
 import { themes } from '@storybook/theming'
 
-import '@sw-ec/ui/dist/index.css'
 import '../src/index.css'
 
 const preview: Preview = {
