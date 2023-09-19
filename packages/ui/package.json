@@ -12,8 +12,8 @@
   "author": "d-kja",
   "license": "MIT",
   "devDependencies": {
-    "@sw-ec/eslint-config": "*",
-    "@sw-ec/ts-config": "*",
+    "@sw-ec/eslint-config": "workspace:*",
+    "@sw-ec/ts-config": "workspace:*",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "react": "^18.2.0",

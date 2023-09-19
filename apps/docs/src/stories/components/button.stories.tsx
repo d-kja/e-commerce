@@ -58,7 +58,7 @@ export const OnlyIcon: StoryObj<ButtonProps> = {
   args: {
     variant: 'primary',
     opt: 'outline',
-    ratio: 'squared',
+    squared: true,
     children: <Loader2 strokeWidth={1.5} className="w-5 h-5 animate-spin" />,
   },
 }

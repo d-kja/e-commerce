@@ -6,7 +6,7 @@ export default {
   component: LanguageBar,
   args: {
     languages: ['PT/BR', 'EN/US'],
-    label: 'PT/BR',
+    selectedLanguage: 'PT/BR',
     onLanguageChange() {},
   },
 } as Meta<LanguageBarProps>

@@ -18,8 +18,8 @@ const ElementVariants = tv({
     opt: {
       outline: 'btn-outline',
     },
-    ratio: {
-      squared: 'btn-square p-0',
+    squared: {
+      true: 'btn-square p-0',
     },
   },
 })
@@ -34,7 +34,7 @@ export const Button: FC<ButtonProps> = ({
   children,
   variant,
   opt,
-  ratio,
+  squared,
   className,
   ...props
 }) => {
@@ -43,7 +43,7 @@ export const Button: FC<ButtonProps> = ({
       className={ElementVariants({
         className,
         opt,
-        ratio,
+        squared,
         variant,
       })}
       {...props}

@@ -11,3 +11,4 @@ export * from './components/ui/input'
 
 // UI Shards
 export * from './components/shards/navigation/language-bar'
+export * from './components/shards/navigation/navbar'

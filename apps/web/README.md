@@ -14,3 +14,11 @@ todo...
 - [ ] Scheduling page
 - [ ] Checkout page
 - [ ] About page
+
+## Packages
+
+- [ ] Zod
+- [ ] Zustand
+- [ ] React Hook Form / Resolvers
+- [ ] React Query
+- [ ] Framer motion
