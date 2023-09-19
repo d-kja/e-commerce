@@ -5,7 +5,7 @@ const ElementVariants = tv({
   base: 'px-12 py-10 rounded',
   variants: {
     theme: {
-      light: 'bg-zinc-200',
+      light: 'bg-zinc-200 ',
       dark: 'bg-zinc-800',
     },
   },
