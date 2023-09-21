@@ -16,15 +16,17 @@
     "@sw-ec/ts-config": "workspace:*",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
-    "react": "^18.2.0",
-    "tsup": "^7.2.0",
-    "typescript": "^4.9.5",
-    "daisyui": "^3.6.3",
-    "tailwindcss": "^3.3.3",
     "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.29"
+    "daisyui": "^3.6.3",
+    "postcss": "^8.4.29",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "tsup": "^7.2.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "1.0.2",
+    "framer-motion": "10.16.4",
     "lucide-react": "^0.272.0",
     "tailwind-variants": "^0.1.13"
   }

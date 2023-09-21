@@ -8,6 +8,7 @@ export * from './components/composable/wrapper'
 export * from './components/ui/button'
 export * from './components/ui/checkbox'
 export * from './components/ui/input'
+export * from './components/ui/nav-link'
 
 // UI Shards
 export * from './components/shards/navigation/language-bar'

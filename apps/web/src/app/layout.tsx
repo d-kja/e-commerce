@@ -2,7 +2,9 @@ import './styles/globals.css'
 
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import { Navbar } from '../components/shards/navbar'
+
+import { LanguageBar } from '../components/client/language-bar'
+import { Navbar } from '../components/layout/navbar'
 
 const fontFamily = Montserrat({ subsets: ['latin'] })
 
@@ -30,10 +32,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" data-theme="dark">
       <body className={fontFamily.className}>
-        <Navbar />
-        {children}
+        <LanguageBar />
+        <div className="max-w-default mx-6 xl:mx-auto">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   )

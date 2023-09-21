@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .max-w-default {
+    @apply max-w-[1220px];
+  }
+
+  .border-dim {
+    --tw-border-opacity: 0.2;
+    border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  }
+}

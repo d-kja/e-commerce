@@ -16,7 +16,7 @@ export const LanguageBar: FC<LanguageBarProps> = ({
   return (
     <section title="Language bar" className="w-full bg-base-300">
       <div className="flex items-center justify-between h-8 px-6 py-2 max-w-[1220px] mx-auto">
-        <span className="font-xs font-normal">
+        <span className="text-xs font-normal">
           Selecione a linguagem da aplicação
         </span>
 
