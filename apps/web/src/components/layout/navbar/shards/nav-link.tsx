@@ -10,9 +10,15 @@ import { usePathname } from 'next/navigation'
 
 interface NavLinkProps extends LinkProps {
   children: ReactNode
+  className?: string
+  layoutId?: string
 }
 
-export const NavLink: FC<NavLinkProps> = ({ children, ...props }) => {
+export const NavLink: FC<NavLinkProps> = ({
+  children,
+  layoutId = 'navigation-underline',
+  ...props
+}) => {
   const path = usePathname()
   const isActivePath = props.href === path
   return (
@@ -23,8 +29,8 @@ export const NavLink: FC<NavLinkProps> = ({ children, ...props }) => {
 
           {isActivePath && (
             <motion.div
-              layoutId="navigation-underline"
-              className="absolute w-full h-[1.5px] bg-neutral-content rounded-full mt-1"
+              layoutId={layoutId}
+              className="absolute w-full h-[1.5px] bg-neutral-content rounded-full"
             />
           )}
         </Link>

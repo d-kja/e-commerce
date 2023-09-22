@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google'
 
 import { LanguageBar } from '../components/client/language-bar'
 import { Navbar } from '../components/layout/navbar'
+import { FloatingNavbar } from '../components/layout/navbar/floating-navbar'
 
 const fontFamily = Montserrat({ subsets: ['latin'] })
 
@@ -32,12 +33,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" data-theme="dark">
+    <html lang="pt-br" data-theme="cupcake">
       <body className={fontFamily.className}>
         <LanguageBar />
-        <div className="max-w-default mx-6 xl:mx-auto">
+        <div className="max-w-default mx-6 xl:mx-auto h-[2000px]">
           <Navbar />
           {children}
+          <FloatingNavbar />
         </div>
       </body>
     </html>
