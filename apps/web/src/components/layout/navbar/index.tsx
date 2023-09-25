@@ -9,7 +9,7 @@ interface NavbarProps {}
 
 export const Navbar: FC<NavbarProps> = () => {
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center border-b border-base-300">
       <Button
         squared
         variant="ghost"

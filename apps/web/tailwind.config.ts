@@ -5,9 +5,7 @@ import daisyui from 'daisyui'
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   theme: {
-    extend: {
-      backgroundImage: {},
-    },
+    extend: {},
   },
   plugins: [daisyui],
   daisyui: {

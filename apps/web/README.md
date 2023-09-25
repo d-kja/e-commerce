@@ -22,3 +22,6 @@ todo...
 - [ ] React Hook Form / Resolvers
 - [ ] React Query
 - [ ] Framer motion
+- [ ] NextAuth / Prisma Adapter
+- [ ] Vitest
+- [ ] Solid / DDD

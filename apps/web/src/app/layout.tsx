@@ -38,8 +38,8 @@ export default function RootLayout({
         <LanguageBar />
         <div className="max-w-default mx-6 xl:mx-auto h-[2000px]">
           <Navbar />
-          {children}
           <FloatingNavbar />
+          {children}
         </div>
       </body>
     </html>

@@ -20,7 +20,11 @@ export const NavLink: FC<NavLinkProps> = ({
   ...props
 }) => {
   const path = usePathname()
-  const isActivePath = props.href === path
+  const isRoot = props.href.toString() === '/'
+  const isActivePath = isRoot
+    ? props.href.toString() === path
+    : path.includes(props.href.toString())
+
   return (
     <>
       <LinkUi className="relative">

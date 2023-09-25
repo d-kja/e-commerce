@@ -30,73 +30,75 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
 
   return (
     <motion.nav
-      className="sticky top-5 flex items-center justify-between px-6 py-2 max-w-[980px] mx-3 lg:mx-auto bg-base-100 border rounded-lg h-[3.75rem]"
+      className="sticky top-5"
       initial="hidden"
       variants={variants}
       animate={isVisible ? 'visible' : 'hidden'}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
     >
-      <div className="flex gap-6 items-center">
-        <strong className="text-xl font-bold">H4S.</strong>
+      <div className="absolute inset-x-0 flex items-center justify-between px-6 py-2 max-w-[980px] mx-3 lg:mx-auto bg-base-100 border rounded-lg h-[3.75rem]">
+        <div className="flex gap-6 items-center">
+          <strong className="text-xl font-bold">H4S.</strong>
 
-        <div className="px-4 py-3 flex items-center gap-4">
-          <NavLink
-            layoutId="floating-link-underline"
-            href="/"
-            className="text-sm"
-          >
-            Destaque
-          </NavLink>
-          <NavLink
-            layoutId="floating-link-underline"
-            href="/products"
-            className="text-sm"
-          >
-            Produtos
-          </NavLink>
+          <div className="px-4 py-3 flex items-center gap-4">
+            <NavLink
+              layoutId="floating-link-underline"
+              href="/"
+              className="text-sm"
+            >
+              Destaque
+            </NavLink>
+            <NavLink
+              layoutId="floating-link-underline"
+              href="/products"
+              className="text-sm"
+            >
+              Produtos
+            </NavLink>
 
-          <NavLink
-            layoutId="floating-link-underline"
-            href="/about"
-            className="text-sm"
-          >
-            Sobre a loja
-          </NavLink>
+            <NavLink
+              layoutId="floating-link-underline"
+              href="/about"
+              className="text-sm"
+            >
+              Sobre a loja
+            </NavLink>
+          </div>
         </div>
-      </div>
 
-      <div className="flex items-center justify-center gap-2">
-        <label className="flex items-center gap-3 px-3 h-9 rounded-full border border-neutral-content/50 focus-within:ring ring-base-300">
-          <Search className="h-4 w-4 text-neutral-content/50" />
-          <input
-            className="outline-none bg-transparent"
-            placeholder="Pesquisar"
-          />
-        </label>
+        <div className="flex items-center justify-center gap-2">
+          <label className="flex items-center gap-3 px-3 h-9 rounded-full border border-neutral-content/50 focus-within:ring ring-base-300">
+            <Search className="h-4 w-4 text-neutral-content/50" />
+            <input
+              className="outline-none bg-transparent"
+              placeholder="Pesquisar"
+            />
+          </label>
 
-        <Button
-          squared
-          variant="ghost"
-          className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item"
-        >
-          <HeartIcon className="w-5 h-5" strokeWidth={1.5} />
-        </Button>
+          <Button
+            squared
+            variant="ghost"
+            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item"
+          >
+            <HeartIcon className="w-5 h-5" strokeWidth={1.5} />
+          </Button>
 
-        <Button
-          squared
-          variant="ghost"
-          className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
-        >
-          <ShoppingCart className="w-5 h-5" strokeWidth={1.5} />
-        </Button>
+          <Button
+            squared
+            variant="ghost"
+            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
+          >
+            <ShoppingCart className="w-5 h-5" strokeWidth={1.5} />
+          </Button>
 
-        <Button
-          squared
-          variant="ghost"
-          className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
-        >
-          <User2 className="w-5 h-5" strokeWidth={1.5} />
-        </Button>
+          <Button
+            squared
+            variant="ghost"
+            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
+          >
+            <User2 className="w-5 h-5" strokeWidth={1.5} />
+          </Button>
+        </div>
       </div>
     </motion.nav>
   )
