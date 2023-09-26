@@ -9,8 +9,8 @@ import { NavLink } from './shards/nav-link'
 interface FloatingNavbarProps {}
 
 const variants = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: -25 },
+  visible: { opacity: 1, y: 0, visibility: 'visible' } as const,
+  hidden: { opacity: 0, y: -25, visibility: 'hidden' } as const,
 }
 
 export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
@@ -30,7 +30,7 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
 
   return (
     <motion.nav
-      className="sticky top-5"
+      className={`sticky top-5 z-20`}
       initial="hidden"
       variants={variants}
       animate={isVisible ? 'visible' : 'hidden'}

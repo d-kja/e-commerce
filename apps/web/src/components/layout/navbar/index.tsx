@@ -26,7 +26,7 @@ export const Navbar: FC<NavbarProps> = () => {
           alt="Store logo"
           className="rounded-lg"
         />
-        <div className="flex justify-center flex-wrap gap-6">
+        <div className="flex justify-center items-baseline flex-wrap gap-6">
           <NavLink href="/">Destaque</NavLink>
           <NavLink href="/products">Produtos</NavLink>
           <NavLink href="/wishlist">Wishlist</NavLink>

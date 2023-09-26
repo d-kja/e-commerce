@@ -28,13 +28,13 @@ export const NavLink: FC<NavLinkProps> = ({
   return (
     <>
       <LinkUi className="relative">
-        <Link {...props}>
+        <Link {...props} className="inline-block ">
           {children}
 
           {isActivePath && (
             <motion.div
               layoutId={layoutId}
-              className="absolute w-full h-[1.5px] bg-neutral-content rounded-full"
+              className="absolute w-full h-[1.5px] bg-neutral-content rounded-full pointer-events-none"
             />
           )}
         </Link>
