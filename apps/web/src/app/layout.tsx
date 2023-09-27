@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="pt-br" data-theme="cupcake">
       <body className={fontFamily.className}>
         <LanguageBar />
-        <div className="max-w-default mx-6 xl:mx-auto h-[2000px]">
+        <div className="max-w-default mx-6 xl:mx-auto">
           <Navbar />
           <FloatingNavbar />
           {children}

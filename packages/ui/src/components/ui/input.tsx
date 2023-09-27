@@ -4,7 +4,7 @@ import { tv, type VariantProps } from 'tailwind-variants'
 const ElementVariants = tv({
   base: [
     'input input-outline bg-transparent h-10',
-    'px-4 py-3 rounded-md',
+    'px-4 py-3 !rounded-md',
     'text-xs font-normal',
     'disabled:bg-transparent disabled:border-opacity-25',
   ],
