@@ -50,7 +50,7 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
             </NavLink>
             <NavLink
               layoutId="floating-link-underline"
-              href="/products"
+              href="/products/-1"
               className="text-sm"
             >
               Produtos

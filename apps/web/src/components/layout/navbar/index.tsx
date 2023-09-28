@@ -28,7 +28,7 @@ export const Navbar: FC<NavbarProps> = () => {
         />
         <div className="flex justify-center items-baseline flex-wrap gap-6">
           <NavLink href="/">Destaque</NavLink>
-          <NavLink href="/products">Produtos</NavLink>
+          <NavLink href="/products/-1">Produtos</NavLink>
           <NavLink href="/wishlist">Wishlist</NavLink>
           <NavLink href="/about">Sobre a loja</NavLink>
         </div>
@@ -42,6 +42,7 @@ export const Navbar: FC<NavbarProps> = () => {
         >
           <ShoppingCart className="w-6 h-6" strokeWidth={1.5} />
         </Button>
+
         <Button
           squared
           variant="ghost"

@@ -4,27 +4,26 @@ import { FC } from 'react'
 
 import * as Collapsible from '@radix-ui/react-collapsible'
 
-import { Button, Checkbox, Input } from '@sw-ec/ui'
+import { Button, Input } from '@sw-ec/ui'
 import { motion } from 'framer-motion'
 import { ChevronDown, SlidersHorizontal } from 'lucide-react'
 
 import { formatPrice } from '@/utils/formatters'
+import { useRouter } from 'next/navigation'
 
 interface FiltersProps {}
 
 const collapsibleRootVariants = {
   default: {
-    y: -5,
     opacity: 0,
     display: 'none',
   },
   animate: {
-    y: 0,
     opacity: 1,
     display: 'flex',
   },
   transition: {
-    staggerChildren: 1,
+    staggerChild: 0.2,
   },
 }
 
@@ -38,6 +37,14 @@ const collapsibleItemVariants = {
 }
 
 export const Filters: FC<FiltersProps> = () => {
+  const router = useRouter()
+
+  const handleClearFilters = () => {
+    // TODO clear price filter before redirecting
+
+    router.push('/products/-1')
+  }
+
   return (
     <div className="max-w-[15rem] w-full flex flex-col gap-4">
       <div className="flex justify-between items-center">
@@ -45,9 +52,13 @@ export const Filters: FC<FiltersProps> = () => {
           <SlidersHorizontal className="w-4 h-4" /> Filtros
         </strong>
 
-        <button className="link link-secondary text-sm">limpar filtros</button>
+        <button
+          className="link link-secondary text-sm"
+          onClick={handleClearFilters}
+        >
+          limpar filtros
+        </button>
       </div>
-
       <hr />
 
       {/* Category collapsible */}
@@ -70,9 +81,7 @@ export const Filters: FC<FiltersProps> = () => {
               animate={collapsibleItemVariants.animate}
               className="flex justify-between items-center text-sm cursor-pointer"
             >
-              <span className="flex items-center gap-3">
-                <Checkbox className="!checkbox-sm" /> Sapatos
-              </span>
+              <span className="flex items-center gap-3">Sapatos</span>
               <span className="text-xs opacity-50">12</span>
             </motion.label>
 
@@ -82,9 +91,7 @@ export const Filters: FC<FiltersProps> = () => {
               animate={collapsibleItemVariants.animate}
               className="flex justify-between items-center text-sm cursor-pointer"
             >
-              <span className="flex items-center gap-3">
-                <Checkbox className="!checkbox-sm" /> Peixe
-              </span>
+              <span className="flex items-center gap-3">Peixe</span>
               <span className="text-xs opacity-50">2</span>
             </motion.label>
 
@@ -94,9 +101,7 @@ export const Filters: FC<FiltersProps> = () => {
               animate={collapsibleItemVariants.animate}
               className="flex justify-between items-center text-sm cursor-pointer"
             >
-              <span className="flex items-center gap-3">
-                <Checkbox className="!checkbox-sm" /> Feijão
-              </span>
+              <span className="flex items-center gap-3">Feijão</span>
               <span className="text-xs opacity-50">32</span>
             </motion.label>
 
@@ -106,9 +111,7 @@ export const Filters: FC<FiltersProps> = () => {
               animate={collapsibleItemVariants.animate}
               className="flex justify-between items-center text-sm cursor-pointer"
             >
-              <span className="flex items-center gap-3">
-                <Checkbox className="!checkbox-sm" /> Carro
-              </span>
+              <span className="flex items-center gap-3">Carro</span>
               <span className="text-xs opacity-50">4</span>
             </motion.label>
 
@@ -118,9 +121,7 @@ export const Filters: FC<FiltersProps> = () => {
               animate={collapsibleItemVariants.animate}
               className="flex justify-between items-center text-sm cursor-pointer"
             >
-              <span className="flex items-center gap-3">
-                <Checkbox className="!checkbox-sm" /> Ventilador
-              </span>
+              <span className="flex items-center gap-3">Ventilador</span>
               <span className="text-xs opacity-50">14</span>
             </motion.label>
           </motion.div>
@@ -150,7 +151,7 @@ export const Filters: FC<FiltersProps> = () => {
                 animate={collapsibleItemVariants.animate}
                 className="flex gap-3 items-center text-sm cursor-pointer"
               >
-                <Checkbox className="!checkbox-sm" /> Até {formatPrice(160)}
+                Até {formatPrice(160)}
               </motion.label>
 
               <motion.label
@@ -159,8 +160,7 @@ export const Filters: FC<FiltersProps> = () => {
                 animate={collapsibleItemVariants.animate}
                 className="flex gap-3 items-center text-sm cursor-pointer"
               >
-                <Checkbox className="!checkbox-sm" /> De {formatPrice(160)} até{' '}
-                {formatPrice(240)}
+                De {formatPrice(160)} até {formatPrice(240)}
               </motion.label>
             </div>
 

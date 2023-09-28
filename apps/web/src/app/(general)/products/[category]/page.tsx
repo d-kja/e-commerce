@@ -1,12 +1,8 @@
-import { FC } from 'react'
-
 import { ProductCard } from '@/components/client/product-card'
 import { Button } from '@sw-ec/ui'
 import { ChevronDown } from 'lucide-react'
 
-interface ProductsListingProps {}
-
-export const ProductsListing: FC<ProductsListingProps> = () => {
+export default function Products() {
   return (
     <div className="flex flex-col flex-1 gap-4">
       <div className="flex justify-between items-center">
