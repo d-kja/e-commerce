@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" data-theme="cupcake">
-      <body className={fontFamily.className}>
+      <body className={`${fontFamily.className} overflow-x-hidden`}>
         <LanguageBar />
         <div className="max-w-default mx-6 xl:mx-auto">
           <Navbar />
