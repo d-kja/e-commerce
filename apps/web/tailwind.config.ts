@@ -5,7 +5,11 @@ import daisyui from 'daisyui'
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '520px',
+      },
+    },
   },
   plugins: [daisyui],
   daisyui: {

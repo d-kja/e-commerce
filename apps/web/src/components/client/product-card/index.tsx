@@ -55,7 +55,7 @@ export const ProductCard: FC<ProductCardProps> = ({
       <Link
         href={`/product/${id}`}
         title={`Produto ${name}`}
-        className="product-card flex flex-col gap-2 p-2 relative focus:outline-none focus-within:ring ring-base-300 rounded-xl"
+        className="product-card flex flex-col xs:gap-2 gap-1 p-2 relative focus:outline-none focus-within:ring ring-base-300 rounded-xl xs:w-auto w-min"
       >
         <span className="absolute top-2 right-4">
           {hasDiscount && (
@@ -65,7 +65,7 @@ export const ProductCard: FC<ProductCardProps> = ({
         <Image
           src={image}
           alt={`Produto ${name}`}
-          className="rounded-2xl shadow h-[184px] object-cover"
+          className="rounded-2xl shadow max-h-[11.5rem] object-cover"
           width={208}
           height={184}
         />

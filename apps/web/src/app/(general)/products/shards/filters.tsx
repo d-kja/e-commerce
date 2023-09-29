@@ -46,7 +46,7 @@ export const Filters: FC<FiltersProps> = () => {
   }
 
   return (
-    <div className="max-w-[15rem] w-full flex flex-col gap-4">
+    <div className="max-w-[15rem] w-full lg:flex hidden flex-col gap-4">
       <div className="flex justify-between items-center">
         <strong className="flex items-center gap-1 text-base font-bold">
           <SlidersHorizontal className="w-4 h-4" /> Filtros
@@ -79,7 +79,7 @@ export const Filters: FC<FiltersProps> = () => {
               initial={collapsibleItemVariants.default}
               exit={collapsibleItemVariants.default}
               animate={collapsibleItemVariants.animate}
-              className="flex justify-between items-center text-sm cursor-pointer"
+              className="flex justify-between items-center text-sm cursor-pointer hover:text-primary transition-colors"
             >
               <span className="flex items-center gap-3">Sapatos</span>
               <span className="text-xs opacity-50">12</span>
@@ -89,7 +89,7 @@ export const Filters: FC<FiltersProps> = () => {
               initial={collapsibleItemVariants.default}
               exit={collapsibleItemVariants.default}
               animate={collapsibleItemVariants.animate}
-              className="flex justify-between items-center text-sm cursor-pointer"
+              className="flex justify-between items-center text-sm cursor-pointer hover:text-primary transition-colors"
             >
               <span className="flex items-center gap-3">Peixe</span>
               <span className="text-xs opacity-50">2</span>
@@ -99,7 +99,7 @@ export const Filters: FC<FiltersProps> = () => {
               initial={collapsibleItemVariants.default}
               exit={collapsibleItemVariants.default}
               animate={collapsibleItemVariants.animate}
-              className="flex justify-between items-center text-sm cursor-pointer"
+              className="flex justify-between items-center text-sm cursor-pointer hover:text-primary transition-colors"
             >
               <span className="flex items-center gap-3">Feijão</span>
               <span className="text-xs opacity-50">32</span>
@@ -109,7 +109,7 @@ export const Filters: FC<FiltersProps> = () => {
               initial={collapsibleItemVariants.default}
               exit={collapsibleItemVariants.default}
               animate={collapsibleItemVariants.animate}
-              className="flex justify-between items-center text-sm cursor-pointer"
+              className="flex justify-between items-center text-sm cursor-pointer hover:text-primary transition-colors"
             >
               <span className="flex items-center gap-3">Carro</span>
               <span className="text-xs opacity-50">4</span>
@@ -119,7 +119,7 @@ export const Filters: FC<FiltersProps> = () => {
               initial={collapsibleItemVariants.default}
               exit={collapsibleItemVariants.default}
               animate={collapsibleItemVariants.animate}
-              className="flex justify-between items-center text-sm cursor-pointer"
+              className="flex justify-between items-center text-sm cursor-pointer hover:text-primary transition-colors"
             >
               <span className="flex items-center gap-3">Ventilador</span>
               <span className="text-xs opacity-50">14</span>
@@ -149,7 +149,7 @@ export const Filters: FC<FiltersProps> = () => {
                 initial={collapsibleItemVariants.default}
                 exit={collapsibleItemVariants.default}
                 animate={collapsibleItemVariants.animate}
-                className="flex gap-3 items-center text-sm cursor-pointer"
+                className="flex gap-3 items-center text-sm cursor-pointer hover:text-primary transition-colors"
               >
                 Até {formatPrice(160)}
               </motion.label>
@@ -158,7 +158,7 @@ export const Filters: FC<FiltersProps> = () => {
                 initial={collapsibleItemVariants.default}
                 exit={collapsibleItemVariants.default}
                 animate={collapsibleItemVariants.animate}
-                className="flex gap-3 items-center text-sm cursor-pointer"
+                className="flex gap-3 items-center text-sm cursor-pointer hover:text-primary transition-colors"
               >
                 De {formatPrice(160)} até {formatPrice(240)}
               </motion.label>
@@ -174,16 +174,19 @@ export const Filters: FC<FiltersProps> = () => {
                 <Input
                   placeholder="Valor min."
                   className="input-bordered min-w-0 h-8 px-4 py-3"
+                  variant="secondary"
                 />
 
                 <div className="w-[3px] h-3/4 my-auto bg-base-300/50 rounded-full" />
 
                 <Input
                   placeholder="Max."
+                  variant="secondary"
                   className="input-bordered min-w-0 h-8 px-4 py-3"
                 />
               </div>
               <Button
+                variant="secondary"
                 opt="outline"
                 className="min-h-8 h-auto flex-1 px-4 py-3 text-xs"
               >
