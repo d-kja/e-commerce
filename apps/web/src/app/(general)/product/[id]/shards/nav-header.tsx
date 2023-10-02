@@ -1,5 +1,7 @@
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import { FC } from 'react'
+
+import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface NavHeaderProps {
   category: string
@@ -20,7 +22,9 @@ export const NavHeader: FC<NavHeaderProps> = ({
   return (
     <header className="flex flex-col gap-5">
       <div className="flex justify-between">
-        <ArrowLeft className="w-[1.625rem] h-[1.625rem]" strokeWidth={1} />
+        <Link href={'/products/-1'}>
+          <ArrowLeft className="w-[1.625rem] h-[1.625rem]" strokeWidth={1} />
+        </Link>
 
         <div className="flex gap-2 items-end">
           <strong className="text-2xl font-normal">{activeImage}</strong>

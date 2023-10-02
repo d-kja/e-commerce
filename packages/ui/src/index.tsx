@@ -2,6 +2,7 @@ import './styles/index.css'
 
 // Composable components
 export * from './components/composable/form-control'
+export * from './components/composable/increment-button'
 export * from './components/composable/wrapper'
 
 // Components
