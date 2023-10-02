@@ -15,6 +15,7 @@ export const Navbar: FC<NavbarProps> = () => {
           squared
           variant="ghost"
           className="p-2 btn-square rounded-tl-xl rounded-bl-xl w-10 h-10 min-h-0 sm:hidden flex"
+          title="Menu"
         >
           <Menu className="w-6 h-6" strokeWidth={1.5} />
         </Button>
@@ -23,6 +24,7 @@ export const Navbar: FC<NavbarProps> = () => {
           squared
           variant="ghost"
           className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item sm:!rounded-xl rounded-tr-xl rounded-br-xl"
+          title="Pesquisa"
         >
           <Search className="w-6 h-6" strokeWidth={1.5} />
         </Button>
@@ -33,7 +35,7 @@ export const Navbar: FC<NavbarProps> = () => {
           src={'https://github.com/d-kja.png'}
           width={125}
           height={125}
-          alt="Store logo"
+          alt="Logo da loja"
           className="rounded-lg"
         />
         <div className="sm:flex hidden justify-center items-baseline flex-wrap gap-6">
@@ -49,6 +51,7 @@ export const Navbar: FC<NavbarProps> = () => {
           squared
           variant="ghost"
           className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item rounded-tl-xl rounded-bl-xl"
+          title="Carrinho"
         >
           <ShoppingCart className="w-6 h-6" strokeWidth={1.5} />
         </Button>
@@ -57,6 +60,7 @@ export const Navbar: FC<NavbarProps> = () => {
           squared
           variant="ghost"
           className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item rounded-tr-xl rounded-br-xl"
+          title="Perfil de usuário"
         >
           <User2 className="w-6 h-6" strokeWidth={1.5} />
         </Button>

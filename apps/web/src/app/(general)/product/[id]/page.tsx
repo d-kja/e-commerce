@@ -23,7 +23,10 @@ export default function Product() {
                 <h1 className="text-2xl font-bold tracking-[-0.6px]">
                   IPhone Max Ultra XL 3000
                 </h1>
-                <Heart className="w-6 h-w-6" strokeWidth={1} />
+                <Heart
+                  className="w-6 h-w-6 hover:text-error hover:fill-current transition-colors cursor-pointer rounded-full focus:ring ring-offset-2"
+                  strokeWidth={1}
+                />
               </div>
 
               <div>
@@ -49,10 +52,10 @@ export default function Product() {
           </div>
 
           <div className="flex gap-5">
-            <div className="w-5 h-5 rounded-full bg-purple-300 ring ring-base-300 ring-offset-1" />
-            <div className="w-5 h-5 rounded-full bg-red-300 ring ring-base-300 ring-offset-1" />
-            <div className="w-5 h-5 rounded-full bg-green-300 ring ring-base-300 ring-offset-1" />
-            <div className="w-5 h-5 rounded-full bg-zinc-300 ring ring-base-300 ring-offset-1" />
+            <div className="w-5 h-5 rounded-full bg-purple-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
+            <div className="w-5 h-5 rounded-full bg-red-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
+            <div className="w-5 h-5 rounded-full bg-green-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
+            <div className="w-5 h-5 rounded-full bg-zinc-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
           </div>
           <div>
             <Button variant="primary" className="px-10">

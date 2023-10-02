@@ -82,12 +82,14 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
             <input
               className="outline-none bg-transparent"
               placeholder="Pesquisar"
+              aria-label="Pequisa de produtos por nome"
             />
           </label>
 
           <Button
             squared
             variant="ghost"
+            title="Lista de desejos"
             className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item"
           >
             <HeartIcon className="w-5 h-5" strokeWidth={1.5} />
@@ -96,6 +98,7 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
           <Button
             squared
             variant="ghost"
+            title="Carrinho"
             className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
           >
             <ShoppingCart className="w-5 h-5" strokeWidth={1.5} />
@@ -104,6 +107,7 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
           <Button
             squared
             variant="ghost"
+            title="Perfil de usuário"
             className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
           >
             <User2 className="w-5 h-5" strokeWidth={1.5} />

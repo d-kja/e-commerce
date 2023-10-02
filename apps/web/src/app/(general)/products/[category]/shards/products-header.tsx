@@ -1,5 +1,5 @@
 import { Button } from '@sw-ec/ui'
-import { ChevronDown } from 'lucide-react'
+import { ChevronLeft } from 'lucide-react'
 import { FC } from 'react'
 
 export const ProductsHeader: FC = () => {
@@ -30,7 +30,7 @@ export const ProductsHeader: FC = () => {
             opt="outline"
             variant="secondary"
           >
-            Ordenar <ChevronDown className="w-4 h-4 hidden xs:inline-block" />
+            <ChevronLeft className="w-4 h-4 hidden xs:inline-block" /> Ordenar
           </Button>
           <ul
             tabIndex={0}
