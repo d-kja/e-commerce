@@ -48,19 +48,29 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
           bounce: true,
         }}
       >
-        <Button squared className="rounded-full" onClick={handleAddToWishlist}>
+        <Button
+          title="Salvar na wishlist"
+          squared
+          className="rounded-full"
+          onClick={handleAddToWishlist}
+        >
           <Heart />
         </Button>
       </motion.div>
 
       <motion.div variants={childAnimationVariants}>
-        <Button squared className="rounded-full" onClick={handleAddToCart}>
+        <Button
+          title="Adicionar ao carrinho"
+          squared
+          className="rounded-full"
+          onClick={handleAddToCart}
+        >
           <ShoppingCart />
         </Button>
       </motion.div>
 
       <motion.div variants={childAnimationVariants}>
-        <Button squared className="rounded-full">
+        <Button title="Acessar o produto" squared className="rounded-full">
           <ArrowRight />
         </Button>
       </motion.div>

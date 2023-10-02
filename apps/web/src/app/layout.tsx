@@ -9,14 +9,17 @@ import { FloatingNavbar } from '../components/layout/navbar/floating-navbar'
 
 const fontFamily = Montserrat({ subsets: ['latin'] })
 
+const metaDescription =
+  'Uma aplicação E-commerce para venda de produtos diversos como, por exemplo, comidas ou até serviços'
+
 export const metadata: Metadata = {
   title: 'H4S | Store',
+  description: metaDescription,
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     title: 'Hub4Stores',
-    description:
-      'Uma aplicação E-commerce para venda de produtos diversos como, por exemplo, comidas ou até serviços',
+    description: metaDescription,
   },
 
   robots: {

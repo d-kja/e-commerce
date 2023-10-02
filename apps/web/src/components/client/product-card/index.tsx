@@ -65,6 +65,7 @@ export const ProductCard: FC<ProductCardProps> = ({
         <Image
           src={image}
           alt={`Produto ${name}`}
+          placeholder="empty"
           className="rounded-2xl shadow max-h-[11.5rem] object-cover"
           width={208}
           height={184}
