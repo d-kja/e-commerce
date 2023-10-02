@@ -23,7 +23,7 @@ export const ProductsHeader: FC = () => {
         >
           categorias
         </Button>
-        <div className="dropdown join-item">
+        <div className="dropdown join-item dropdown-left">
           <Button
             tabIndex={0}
             className="min-h-8 h-auto flex-1 px-3 py-2 btn-sm text-xs lg:rounded-full rounded-r-full border border-neutral-content/75"
