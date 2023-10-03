@@ -14,6 +14,7 @@
     "@sw-ec/ui": "workspace:*",
     "axios": "1.5.1",
     "framer-motion": "10.16.4",
+    "keen-slider": "6.8.6",
     "lucide-react": "^0.272.0",
     "next": "^13.4.19",
     "react": "^18.2.0",

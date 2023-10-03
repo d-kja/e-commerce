@@ -22,7 +22,10 @@ export const NavHeader: FC<NavHeaderProps> = ({
   return (
     <header className="flex flex-col gap-5">
       <div className="flex justify-between">
-        <Link href={'/products/-1'}>
+        <Link
+          href={'/products/-1'}
+          className="hover:text-primary transition-colors"
+        >
           <ArrowLeft className="w-[1.625rem] h-[1.625rem]" strokeWidth={1} />
         </Link>
 

@@ -3,7 +3,7 @@
 import { FC } from 'react'
 
 import * as Collapsible from '@radix-ui/react-collapsible'
-import { Button } from '@sw-ec/ui'
+import { Button, IncrementButton } from '@sw-ec/ui'
 import { motion } from 'framer-motion'
 
 import { ChevronDown, Heart, Plus } from 'lucide-react'
@@ -29,7 +29,7 @@ export const ProductDescription: FC<ProductDescriptionProps> = () => {
     <>
       <section
         title="details"
-        className="flex flex-col max-w-[440px] flex-1 gap-9"
+        className="flex flex-col md:min-w-[27.5rem] max-h-[438px] flex-1 gap-9"
       >
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4 w-full">
@@ -65,13 +65,22 @@ export const ProductDescription: FC<ProductDescriptionProps> = () => {
           </div>
         </div>
 
+        {/* TODO - product options selection */}
         <div className="flex gap-5">
           <div className="w-5 h-5 rounded-full bg-purple-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
           <div className="w-5 h-5 rounded-full bg-red-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
           <div className="w-5 h-5 rounded-full bg-green-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
           <div className="w-5 h-5 rounded-full bg-zinc-300 ring ring-base-300 ring-offset-1 cursor-pointer hover:brightness-90 transition-[filter]" />
         </div>
-        <div>
+
+        <div className="flex gap-4 items-center">
+          <IncrementButton
+            border
+            amount={1}
+            onDecrease={() => {}}
+            onIncrease={() => {}}
+            className="max-w-[8.75rem]"
+          />
           <Button variant="primary" className="px-10" title="Comprar produto">
             Comprar <Plus className="w-5 h-5" />
           </Button>
