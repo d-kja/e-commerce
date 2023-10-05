@@ -6,11 +6,11 @@ export const ProductsHeader: FC = () => {
   return (
     <div className="flex justify-between items-center">
       <div className="flex flex-col gap-1">
-        <strong className="text-xl font-semibold">
+        <strong className="text-lg md:text-xl font-semibold">
           <span className="xs:inline hidden">Listagem de produtos</span>
           <span className="xs:hidden inline">Produtos</span>
         </strong>
-        <span className="text-sm font-normal xs:flex hidden">
+        <span className="text-xs md:text-sm font-normal xs:flex hidden">
           Mostrando 1-50 de 300 produtos
         </span>
       </div>
@@ -26,7 +26,7 @@ export const ProductsHeader: FC = () => {
         <div className="dropdown join-item dropdown-left">
           <Button
             tabIndex={0}
-            className="min-h-8 h-auto flex-1 px-3 py-2 btn-sm text-xs lg:rounded-full rounded-r-full border border-neutral-content/75"
+            className="h-auto flex-1 !px-3 !py-2 btn-sm !text-xs lg:rounded-full rounded-r-full border border-neutral-content/75"
             opt="outline"
             variant="secondary"
           >
@@ -37,16 +37,16 @@ export const ProductsHeader: FC = () => {
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
           >
             <li>
-              <a>Maior preço</a>
+              <button className="text-xs md:text-sm">Maior preço</button>
             </li>
             <li>
-              <a>Menor preço</a>
+              <button className="text-xs md:text-sm">Menor preço</button>
             </li>
             <li>
-              <a>Ordem crescente</a>
+              <button className="text-xs md:text-sm">Ordem crescente</button>
             </li>
             <li>
-              <a>Ordem decrescente</a>
+              <button className="text-xs md:text-sm">Ordem decrescente</button>
             </li>
           </ul>
         </div>

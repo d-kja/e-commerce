@@ -71,12 +71,12 @@ export const ProductCard: FC<ProductCardProps> = ({
           height={184}
         />
 
-        <div className="flex flex-col gap-1 py-3 px-4">
+        <div className="flex flex-col gap-1 md:py-3 py-2 md:px-4 px-3">
           <span className="text-sm">{name}</span>
           <div className="flex gap-[0.625rem] items-center">
             {hasDiscount ? (
               <>
-                <strong className="text-base font-medium">
+                <strong className="text-sm md:text-base font-medium">
                   {discountedPrice}
                 </strong>
                 <span className="text-xs font-normal line-through opacity-30">
@@ -84,7 +84,9 @@ export const ProductCard: FC<ProductCardProps> = ({
                 </span>
               </>
             ) : (
-              <strong className="text-base font-medium">{defaultPrice}</strong>
+              <strong className="text-sm md:text-base font-medium">
+                {defaultPrice}
+              </strong>
             )}
           </div>
           {hasInstallments && (

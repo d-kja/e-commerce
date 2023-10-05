@@ -38,7 +38,7 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
     >
       <div className="absolute inset-x-0 flex items-center justify-between px-6 py-2 max-w-[980px] mx-3 lg:mx-auto bg-base-100 border rounded-lg h-[3.75rem]">
         <div className="flex gap-6 items-center">
-          <strong className="text-xl font-bold">H4S.</strong>
+          <strong className="text-base lg:text-xl font-bold">H4S.</strong>
 
           {/* Menu links */}
           <div className="hidden px-4 py-3 lg:flex items-center gap-4">
@@ -70,9 +70,9 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
           <Button
             squared
             variant="ghost"
-            className="lg:hidden flex btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item"
+            className="lg:hidden flex btn-square rounded-xl !p-1 w-8 h-8 min-h-0 join-item"
           >
-            <Menu className="w-5 h-5" strokeWidth={1.5} />
+            <Menu className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
           </Button>
         </div>
 
@@ -90,27 +90,27 @@ export const FloatingNavbar: FC<FloatingNavbarProps> = () => {
             squared
             variant="ghost"
             title="Lista de desejos"
-            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item"
+            className="btn-square rounded-xl !p-1 w-8 h-8 min-h-0 join-item"
           >
-            <HeartIcon className="w-5 h-5" strokeWidth={1.5} />
+            <HeartIcon className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
           </Button>
 
           <Button
             squared
             variant="ghost"
             title="Carrinho"
-            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
+            className="btn-square rounded-xl !p-1 w-8 h-8 min-h-0 join-item "
           >
-            <ShoppingCart className="w-5 h-5" strokeWidth={1.5} />
+            <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
           </Button>
 
           <Button
             squared
             variant="ghost"
             title="Perfil de usuário"
-            className="btn-square rounded-xl p-1 w-8 h-8 min-h-0 join-item "
+            className="btn-square rounded-xl !p-1 w-8 h-8 min-h-0 join-item "
           >
-            <User2 className="w-5 h-5" strokeWidth={1.5} />
+            <User2 className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
           </Button>
         </div>
       </div>

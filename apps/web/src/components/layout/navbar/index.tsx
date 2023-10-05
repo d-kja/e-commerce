@@ -14,19 +14,19 @@ export const Navbar: FC<NavbarProps> = () => {
         <Button
           squared
           variant="ghost"
-          className="p-2 btn-square rounded-tl-xl rounded-bl-xl w-10 h-10 min-h-0 sm:hidden flex"
+          className="p-1 md:p-2 btn-square rounded-tl-xl rounded-bl-xl w-8 h-8 md:w-10 md:h-10 min-h-0 sm:hidden flex"
           title="Menu"
         >
-          <Menu className="w-6 h-6" strokeWidth={1.5} />
+          <Menu className="md:w-6 md:h-6 w-4 h-4" strokeWidth={1.5} />
         </Button>
 
         <Button
           squared
           variant="ghost"
-          className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item sm:!rounded-xl rounded-tr-xl rounded-br-xl"
+          className="btn-square rounded-2xl p-1 md:p-2 w-8 h-8 md:w-10 md:h-10 min-h-0 join-item sm:!rounded-xl rounded-tr-xl rounded-br-xl"
           title="Pesquisa"
         >
-          <Search className="w-6 h-6" strokeWidth={1.5} />
+          <Search className="md:w-6 md:h-6 w-4 h-4" strokeWidth={1.5} />
         </Button>
       </div>
 
@@ -36,7 +36,7 @@ export const Navbar: FC<NavbarProps> = () => {
           width={125}
           height={125}
           alt="Logo da loja"
-          className="rounded-lg"
+          className="rounded-lg md:max-w-fit max-w-[96px]"
         />
         <div className="sm:flex hidden justify-center items-baseline flex-wrap gap-6">
           <NavLink href="/">Destaque</NavLink>
@@ -50,19 +50,19 @@ export const Navbar: FC<NavbarProps> = () => {
         <Button
           squared
           variant="ghost"
-          className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item rounded-tl-xl rounded-bl-xl"
+          className="btn-square rounded-2xl p-1 md:p-2 w-8 h-8 md:w-10 md:h-10 min-h-0 join-item rounded-tl-xl rounded-bl-xl"
           title="Carrinho"
         >
-          <ShoppingCart className="w-6 h-6" strokeWidth={1.5} />
+          <ShoppingCart className="md:w-6 md:h-6 w-4 h-4" strokeWidth={1.5} />
         </Button>
 
         <Button
           squared
           variant="ghost"
-          className="btn-square rounded-2xl p-2 w-10 h-10 min-h-0 join-item rounded-tr-xl rounded-br-xl"
+          className="btn-square rounded-2xl p-1 md:p-2 w-8 h-8 md:w-10 md:h-10 min-h-0 join-item rounded-tr-xl rounded-br-xl"
           title="Perfil de usuário"
         >
-          <User2 className="w-6 h-6" strokeWidth={1.5} />
+          <User2 className="md:w-6 md:h-6 w-4 h-4" strokeWidth={1.5} />
         </Button>
       </div>
     </nav>

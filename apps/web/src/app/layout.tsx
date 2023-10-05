@@ -7,7 +7,7 @@ import { LanguageBar } from '../components/client/language-bar'
 import { Navbar } from '../components/layout/navbar'
 import { FloatingNavbar } from '../components/layout/navbar/floating-navbar'
 
-const fontFamily = Montserrat({ subsets: ['latin'] })
+const fontFamily = Montserrat({ subsets: ['latin'], fallback: ['sans-serif'] })
 
 const metaDescription =
   'Uma aplicação E-commerce para venda de produtos diversos como, por exemplo, comidas ou até serviços'

@@ -36,6 +36,7 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
     <motion.div
       initial="hidden"
       whileHover="visible"
+      whileFocus="visible"
       variants={animationVariants}
       transition={{
         staggerChildren: 0.2,
@@ -51,10 +52,10 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
         <Button
           title="Salvar na wishlist"
           squared
-          className="rounded-full"
+          className="rounded-full md:w-12 md:h-12 w-10 h-10 min-h-0"
           onClick={handleAddToWishlist}
         >
-          <Heart />
+          <Heart className="md:w-5 md:h-5 w-4 h-4" />
         </Button>
       </motion.div>
 
@@ -62,16 +63,20 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
         <Button
           title="Adicionar ao carrinho"
           squared
-          className="rounded-full"
+          className="rounded-full md:w-12 md:h-12 w-10 h-10 min-h-0"
           onClick={handleAddToCart}
         >
-          <ShoppingCart />
+          <ShoppingCart className="md:w-5 md:h-5 w-4 h-4" />
         </Button>
       </motion.div>
 
       <motion.div variants={childAnimationVariants}>
-        <Button title="Acessar o produto" squared className="rounded-full">
-          <ArrowRight />
+        <Button
+          title="Acessar o produto"
+          squared
+          className="rounded-full md:w-12 md:h-12 w-10 h-10 min-h-0"
+        >
+          <ArrowRight className="md:w-5 md:h-5 w-4 h-4" />
         </Button>
       </motion.div>
     </motion.div>

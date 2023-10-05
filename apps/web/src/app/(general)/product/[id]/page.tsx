@@ -15,7 +15,7 @@ export default function Product() {
         maxImagesAvailable={5}
       />
 
-      <main className="flex flex-col-reverse lg:flex-row lg:justify-between gap-10">
+      <main className="flex flex-col-reverse lg:flex-row lg:justify-between gap-4 lg:gap-10">
         <ProductDescription />
         <ProductCarousel />
       </main>

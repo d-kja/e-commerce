@@ -30,8 +30,10 @@ export const NavHeader: FC<NavHeaderProps> = ({
         </Link>
 
         <div className="flex gap-2 items-end">
-          <strong className="text-2xl font-normal">{activeImage}</strong>
-          <span className="text-lg font-normal opacity-40">
+          <strong className="text-lg lg:text-2xl font-normal">
+            {activeImage}
+          </strong>
+          <span className="text-base lg:text-lg font-normal opacity-40">
             / {totalImages}
           </span>
         </div>

@@ -1,13 +1,13 @@
 'use client'
 
-import { LanguageBar as LanguageBarUi } from '@sw-ec/ui'
+import { LanguageBar as LanguageBarUI } from '@sw-ec/ui'
 import { FC } from 'react'
 
 interface LanguageBarProps {}
 
 export const LanguageBar: FC<LanguageBarProps> = () => {
   return (
-    <LanguageBarUi
+    <LanguageBarUI
       languages={['PT', 'EN']}
       selectedLanguage="PT-BR"
       onLanguageChange={() => {}}
