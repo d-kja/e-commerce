@@ -71,7 +71,7 @@ export const ProductCard: FC<ProductCardProps> = ({
           height={184}
         />
 
-        <div className="flex flex-col gap-1 md:py-3 py-2 md:px-4 px-3">
+        <div className="flex flex-col gap-1 py-3 px-4">
           <span className="text-sm">{name}</span>
           <div className="flex gap-[0.625rem] items-center">
             {hasDiscount ? (
