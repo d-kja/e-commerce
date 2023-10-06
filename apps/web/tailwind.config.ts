@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 import daisyui from 'daisyui'
+import tailwindScrollbar from 'tailwind-scrollbar'
 
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
@@ -11,7 +12,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [daisyui, tailwindScrollbar],
   daisyui: {
     themes: [
       'light',

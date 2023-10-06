@@ -13,4 +13,33 @@
     --tw-border-opacity: 0.2;
     border-color: hsl(var(--bc) / var(--tw-border-opacity));
   }
+
+  .fade-edges {
+    @apply relative;
+  }
+
+  .fade-edges:after {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: linear-gradient(
+      to right,
+      hsl(var(--b1) / 1) 0%,
+      hsl(var(--b1) / 0) 15%,
+      hsl(var(--b1) / 0) 50%,
+      hsl(var(--b1) / 0) 85%,
+      hsl(var(--b1) / 1) 100%
+    );
+    pointer-events: none; /* so the text is still selectable */
+  }
+}
+
+html {
+  @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-base-300;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply !rounded;
 }

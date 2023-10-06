@@ -55,7 +55,7 @@ export const ProductCard: FC<ProductCardProps> = ({
       <Link
         href={`/product/${id}`}
         title={`Produto ${name}`}
-        className="product-card flex flex-col xs:gap-2 gap-1 p-2 relative focus:outline-none focus-within:ring ring-base-300 rounded-xl xs:w-auto w-min"
+        className="product-card flex flex-col xs:gap-2 gap-1 p-2 relative focus:outline-none focus-within:ring ring-base-300 rounded-xl w-auto"
       >
         <span className="absolute top-2 right-4">
           {hasDiscount && (

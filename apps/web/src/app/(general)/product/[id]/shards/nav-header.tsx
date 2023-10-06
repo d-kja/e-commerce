@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
 
+import { Button } from '@sw-ec/ui'
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface NavHeaderProps {
@@ -51,8 +52,22 @@ export const NavHeader: FC<NavHeaderProps> = ({
         </div>
 
         <div className="flex gap-7">
-          <ChevronLeft className="h-6 w-6" strokeWidth={1} />
-          <ChevronRight className="h-6 w-6" strokeWidth={1} />
+          <Button
+            squared
+            variant="ghost"
+            title="Imagem anterior"
+            className="w-min h-min min-h-0 border border-transparent hover:border-base-300 transition-colors hover:bg-transparent"
+          >
+            <ChevronLeft className="h-6 w-6  opacity-60" strokeWidth={1.5} />
+          </Button>
+          <Button
+            squared
+            variant="ghost"
+            title="Próxima imagem"
+            className="w-min h-min min-h-0 border border-transparent hover:border-base-300 transition-colors hover:bg-transparent"
+          >
+            <ChevronRight className="h-6 w-6 opacity-60" strokeWidth={1.5} />
+          </Button>
         </div>
       </div>
     </header>
