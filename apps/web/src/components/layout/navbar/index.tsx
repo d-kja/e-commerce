@@ -1,7 +1,8 @@
 import { FC } from 'react'
 
+import { CartModal } from '@/components/client/cart-modal'
 import { Button } from '@sw-ec/ui'
-import { Menu, Search, ShoppingCart, User2 } from 'lucide-react'
+import { Menu, Search, User2 } from 'lucide-react'
 import Image from 'next/image'
 import { NavLink } from './shards/nav-link'
 
@@ -47,14 +48,7 @@ export const Navbar: FC<NavbarProps> = () => {
       </div>
 
       <div className="flex items-center justify-center px-2 py-1 join border border-neutral-content/25 rounded-2xl">
-        <Button
-          squared
-          variant="ghost"
-          className="btn-square rounded-2xl p-1 md:p-2 w-8 h-8 md:w-10 md:h-10 min-h-0 join-item rounded-tl-xl rounded-bl-xl"
-          title="Carrinho"
-        >
-          <ShoppingCart className="md:w-6 md:h-6 w-4 h-4" strokeWidth={1.5} />
-        </Button>
+        <CartModal />
 
         <Button
           squared

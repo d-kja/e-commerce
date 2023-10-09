@@ -1,4 +1,8 @@
-import type { ComponentProps, FC } from 'react'
+import {
+  forwardRef,
+  ForwardRefRenderFunction,
+  type ComponentProps,
+} from 'react'
 
 import { tv, type VariantProps } from 'tailwind-variants'
 
@@ -30,14 +34,10 @@ export interface ButtonProps
   extends ButtonVariantProps,
     ComponentProps<'button'> {}
 
-export const Button: FC<ButtonProps> = ({
-  children,
-  variant,
-  opt,
-  squared,
-  className,
-  ...props
-}) => {
+const _Button: ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (
+  { children, variant, opt, squared, className, ...props },
+  ref,
+) => {
   return (
     <button
       className={ElementVariants({
@@ -47,8 +47,11 @@ export const Button: FC<ButtonProps> = ({
         variant,
       })}
       {...props}
+      ref={ref}
     >
       {children}
     </button>
   )
 }
+
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(_Button)

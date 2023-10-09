@@ -3,9 +3,12 @@ import './styles/globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
+import { BoundedContext } from '@/components/client/bounded-context'
 import { LanguageBar } from '../components/client/language-bar'
 import { Navbar } from '../components/layout/navbar'
 import { FloatingNavbar } from '../components/layout/navbar/floating-navbar'
+
+import { twMerge } from 'tailwind-merge'
 
 const fontFamily = Montserrat({ subsets: ['latin'], fallback: ['sans-serif'] })
 
@@ -36,14 +39,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" data-theme="cupcake">
-      <body className={fontFamily.className}>
-        <LanguageBar />
-        <div className="max-w-default mx-6 xl:mx-auto">
-          <Navbar />
-          <FloatingNavbar />
-          {children}
-        </div>
+    <html lang="pt-br" data-theme="lofi">
+      <body className={twMerge(fontFamily.className, 'relative')}>
+        <BoundedContext>
+          <LanguageBar />
+          <div className="max-w-default mx-6 xl:mx-auto">
+            <Navbar />
+            <FloatingNavbar />
+            {children}
+          </div>
+        </BoundedContext>
       </body>
     </html>
   )

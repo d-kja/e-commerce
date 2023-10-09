@@ -4,10 +4,19 @@ import { FC } from 'react'
 
 import { Button, IncrementButton } from '@sw-ec/ui'
 import { Heart, Plus } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 interface ProductDescriptionProps {}
 
 export const ProductDescription: FC<ProductDescriptionProps> = () => {
+  const handleAddToCart = async () => {
+    toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
+      loading: 'Adicionando ao carrinho',
+      error: 'Ocorreu um erro',
+      success: 'Produto adicionado',
+    })
+  }
+
   return (
     <>
       <section
@@ -71,7 +80,12 @@ export const ProductDescription: FC<ProductDescriptionProps> = () => {
             onIncrease={() => {}}
             className="max-w-[6.5rem] h-12 lg:h-auto lg:max-w-[8.75rem]"
           />
-          <Button variant="primary" className="px-10" title="Comprar produto">
+          <Button
+            variant="primary"
+            className="px-10"
+            title="Comprar produto"
+            onClick={handleAddToCart}
+          >
             Comprar <Plus className="w-4 lg:w-5 h-4 lg:h-5" />
           </Button>
         </div>
