@@ -12,12 +12,7 @@ export default function Product() {
       className="mt-3 lg:px-20 py-8 lg:py-16 flex flex-col gap-9"
       title="product"
     >
-      <NavHeader
-        category="telefone"
-        productName="iphone"
-        activeImageIndex={1}
-        maxImagesAvailable={5}
-      />
+      <NavHeader category="telefone" productName="iphone" />
 
       <main className="flex flex-col gap-9">
         <section

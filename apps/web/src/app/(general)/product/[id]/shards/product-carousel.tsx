@@ -3,6 +3,7 @@
 
 import { FC, MutableRefObject } from 'react'
 
+import { useStore } from '@/store'
 import 'keen-slider/keen-slider.min.css'
 import {
   KeenSliderHooks,
@@ -10,6 +11,7 @@ import {
   useKeenSlider,
 } from 'keen-slider/react'
 import Image from 'next/image'
+import { ProductCarouselLoading } from './product-carousel-loading'
 
 type CarouselRef = MutableRefObject<KeenSliderInstance<
   unknown,
@@ -55,8 +57,25 @@ interface ProductCarouselProps {
 }
 
 export const ProductCarousel: FC<ProductCarouselProps> = ({ perView = 4 }) => {
+  const { updateSliderReference, updateActiveSlide, isSliderLoading } =
+    useStore((ctx) => {
+      const updateSliderReference = ctx.updateSliderRef
+      const updateActiveSlide = ctx.updateActiveSlide
+      const isSliderLoading = ctx.isSliderLoading
+
+      return { updateSliderReference, updateActiveSlide, isSliderLoading }
+    })
+
   const [mainSliderRef, mainInstanceRef] = useKeenSlider({
     initial: 0,
+    created: (ref) => {
+      updateSliderReference(ref)
+    },
+    renderMode: 'performance',
+    slideChanged: (ref) => {
+      const activeSlide = ref.track.details.rel
+      updateActiveSlide(activeSlide)
+    },
   })
   const [thumbnailRef] = useKeenSlider(
     {
@@ -74,8 +93,10 @@ export const ProductCarousel: FC<ProductCarouselProps> = ({ perView = 4 }) => {
   return (
     <section
       title="Product preview"
-      className="flex-1 flex flex-col gap-6 overflow-hidden"
+      className="flex-1 flex flex-col gap-6 overflow-hidden relative"
     >
+      {isSliderLoading && <ProductCarouselLoading />}
+
       <div ref={mainSliderRef} className="keen-slider h-full">
         {fakeSlides.map((_, idx) => (
           <Image
