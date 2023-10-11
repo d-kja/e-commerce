@@ -52,7 +52,7 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
         <Button
           title="Salvar na wishlist"
           squared
-          className="rounded-full w-12 h-12 min-h-0"
+          className="hover:bg-base-100/50 hover:text-primary hover:border-2 rounded-full w-12 h-12 min-h-0"
           onClick={handleAddToWishlist}
         >
           <Heart className="w-5 h-5" />
@@ -63,7 +63,7 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
         <Button
           title="Adicionar ao carrinho"
           squared
-          className="rounded-full w-12 h-12 min-h-0"
+          className="hover:bg-base-100/50 hover:text-primary hover:border-2 rounded-full w-12 h-12 min-h-0"
           onClick={handleAddToCart}
         >
           <ShoppingCart className="w-5 h-5" />
@@ -74,7 +74,7 @@ export const HoverLayer: FC<HoverLayerProps> = () => {
         <Button
           title="Acessar o produto"
           squared
-          className="rounded-full w-12 h-12 min-h-0"
+          className="hover:bg-base-100/50 hover:text-primary hover:border-2 rounded-full w-12 h-12 min-h-0"
         >
           <ArrowRight className="w-5 h-5" />
         </Button>

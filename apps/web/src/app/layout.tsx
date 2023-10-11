@@ -1,6 +1,6 @@
 import './styles/globals.css'
 
-import '@sw-ec/ui/dist/index.css'
+// import '@sw-ec/ui/dist/index.css'
 
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
