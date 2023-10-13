@@ -9,8 +9,8 @@ todo...
 ## TO-DO
 
 - [ ] Home page
-- [ ] Products page
-- [ ] Product page
+- [x] Products page
+- [x] Product page
 - [ ] Scheduling page
 - [ ] Checkout page
 - [ ] About page

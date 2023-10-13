@@ -1,5 +1,7 @@
 import './styles/globals.css'
 
+// import '@sw-ec/ui/dist/index.css'
+
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
@@ -39,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" data-theme="lofi">
+    <html lang="pt-br" data-theme="light">
       <body className={twMerge(fontFamily.className, 'relative')}>
         <BoundedContext>
           <LanguageBar />

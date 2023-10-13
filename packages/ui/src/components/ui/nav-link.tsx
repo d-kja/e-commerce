@@ -7,6 +7,7 @@ const ElementVariants = tv({
   base: [
     'link focus:outline-none focus-within:border-b border-neutral-content/50 ring-neutral-content !no-underline',
     'font-normal text-base',
+    'hover:text-primary transition-colors',
   ],
 })
 

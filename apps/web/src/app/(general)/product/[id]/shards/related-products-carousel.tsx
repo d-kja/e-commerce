@@ -67,6 +67,7 @@ export const RelatedProductsCarousel: FC<RelatedProductsCarouselProps> = () => {
               href={`/product/product-${idx}`}
               key={idx}
               title={`Produto ${idx}`}
+              scroll
             >
               <Image
                 src={'https://i.imgur.com/8x4it95.png'}

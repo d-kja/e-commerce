@@ -1,3 +1,4 @@
+import { Slot } from '@radix-ui/react-slot'
 import {
   forwardRef,
   ForwardRefRenderFunction,
@@ -23,7 +24,7 @@ const ElementVariants = tv({
       outline: 'btn-outline',
     },
     squared: {
-      true: 'btn-square !p-0',
+      true: 'btn-square p-0',
     },
   },
 })
@@ -32,14 +33,18 @@ type ButtonVariantProps = VariantProps<typeof ElementVariants>
 
 export interface ButtonProps
   extends ButtonVariantProps,
-    ComponentProps<'button'> {}
+    ComponentProps<'button'> {
+  asChild?: boolean
+}
 
 const _Button: ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (
-  { children, variant, opt, squared, className, ...props },
+  { children, variant, opt, squared, className, asChild = false, ...props },
   ref,
 ) => {
+  const Component = asChild ? Slot : 'button'
+
   return (
-    <button
+    <Component
       className={ElementVariants({
         className,
         opt,
@@ -50,7 +55,7 @@ const _Button: ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (
       ref={ref}
     >
       {children}
-    </button>
+    </Component>
   )
 }
 

@@ -38,6 +38,8 @@ export const Navbar: FC<NavbarProps> = () => {
           height={125}
           alt="Logo da loja"
           className="rounded-lg md:max-w-fit max-w-[96px]"
+          loading="lazy"
+          placeholder="empty"
         />
         <div className="sm:flex hidden justify-center items-baseline flex-wrap gap-6">
           <NavLink href="/">Destaque</NavLink>
