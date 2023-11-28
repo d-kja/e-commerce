@@ -10,8 +10,8 @@
     "create-commit": "cz"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@d-kja/ecommerce-eslint-config": "*",
+    "@d-kja/ecommerce-ts-config": "*",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
     "prettier": "^3.1.0",
