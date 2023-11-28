@@ -6,14 +6,16 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "create-commit": "cz"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
     "prettier": "^3.1.0",
-    "turbo": "latest",
-    "husky": "^8.0.0"
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=18"
@@ -25,6 +27,12 @@
   ],
   "dependencies": {
     "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3"
+    "@commitlint/config-conventional": "^18.4.3",
+    "commitizen": "^4.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
