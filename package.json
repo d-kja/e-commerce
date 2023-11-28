@@ -2,16 +2,14 @@
   "name": "e-commerce",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
+    "build": "turbo build --filter=!./apps",
+    "dev": "turbo run dev --filter=!./apps/**",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
     "create-commit": "cz"
   },
   "devDependencies": {
-    "@d-kja/ecommerce-eslint-config": "*",
-    "@d-kja/ecommerce-ts-config": "*",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
     "prettier": "^3.1.0",
@@ -22,12 +20,14 @@
   },
   "packageManager": "bun@1.0.13",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "dependencies": {
+    "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@rocketseat/eslint-config": "^2.1.0",
     "commitizen": "^4.3.0"
   },
   "config": {

@@ -1,9 +1,0 @@
-{
-  "name": "@d-kja/ecommerce-eslint-config",
-  "module": "index.js",
-  "private": true,
-  "version": "0.1.0",
-  "dependencies": {
-    "@rocketseat/eslint-config": "^2.1.0"
-  }
-}
